@@ -1,0 +1,22 @@
+{
+  "name": "food-recipes",
+  "version": "1.0.0",
+  "description": "A food recipes site called Forkify, where you can store your favorite ones locally and even more features. Using babel and webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kozlvign/Food-Recipes.git"
+  },
+  "author": "Igor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kozlvign/Food-Recipes/issues"
+  },
+  "homepage": "https://github.com/Kozlvign/Food-Recipes#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0"
+  }
+}
