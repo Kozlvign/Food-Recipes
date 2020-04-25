@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Kozlvign/Food-Recipes/issues"
   },
-  "homepage": "https://github.com/Kozlvign/Food-Recipes#readme",
+  "homepage": "https://github.com/Kozlvign/Food-Recipes",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
