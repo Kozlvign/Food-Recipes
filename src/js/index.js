@@ -54,6 +54,7 @@ const controlRecipe = async () => {
 
         try {
             await state.recipe.getRecipe();
+            state.recipe.parseIngredients();
     
             state.recipe.calcTime();
             state.recipe.calcServings();
@@ -66,4 +67,4 @@ const controlRecipe = async () => {
     }
 };
 
-['hashchange', 'load'].forEach(event => window.addEventListener(even, controlRecipe));
+['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
