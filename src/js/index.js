@@ -104,9 +104,6 @@ elements.shopping.addEventListener('click', e => {
     }
 });
 
-state.likes = new Likes();
-likesView.toggleLikeMenu(state.likes.getNumLikes());
-
 const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
@@ -133,6 +130,12 @@ const controlLike = () => {
     likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
 
+window.addEventListener('load', () => {
+    state.likes = new Likes();
+    state.likes.readStorage();
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
+    state.likes.likes.forEach(like => likesView.renderLike(like))
+});
 
 elements.recipe.addEventListener('click', e => {
     if (e.target.matches('.btn-decrease, .btn-decrease *')) {
@@ -144,11 +147,11 @@ elements.recipe.addEventListener('click', e => {
     } else if (e.target.matches('.btn-increase, .btn-increase *')) {
         state.recipe.updateServings('inc');
         recipeView.updateServingsIngredients(state.recipe);
+
     } else if (e.target.matches('.recipe__btn--add, .recipe__btn--add *')) {
         controlList();
+        
     } else if (e.target.matches('.recipe__love, .recipe__love *')) {
         controlLike();
     }
 });
-
-window.l = new List();
